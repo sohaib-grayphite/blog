@@ -1,9 +1,3 @@
-.idea/*
-.vscode/*
-.venv/*
-*.pyc
-.env-local
-.vscode
 # Python
 *.pyc
 *.pyo
