@@ -24,8 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '<a string of random characters>')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -102,7 +100,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Configure database using DATABASE_URL; fall back to sqlite in memory when no
 # environment variable is available, e.g. during Docker build
-DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite://:memory:')
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
 DATABASES = {'default': dj_database_url.parse(DATABASE_URL)}
 
@@ -189,7 +187,7 @@ DefaultStorageClass = dsn_configured_storage_class('DEFAULT_STORAGE_DSN')
 
 
 # Django's DEFAULT_FILE_STORAGE requires the class name
-DEFAULT_FILE_STORAGE = 'blog.settings.DefaultStorageClass'
+DEFAULT_FILE_STORAGE = 'backend.settings.DefaultStorageClass'
 
 # only required for local file storage and serving, in development
 MEDIA_URL = '/media/'
