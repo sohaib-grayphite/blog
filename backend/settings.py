@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # environment variable is available, e.g. during Docker build
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
-DATABASES = {'default': dj_database_url.parse(DATABASE_URL)}
+DATABASES = {'default': dj_database_url.config()}
 
 
 
